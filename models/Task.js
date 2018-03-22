@@ -12,6 +12,7 @@ var Task = {
         return db.query("select * from task where Id=?", [id], callback);
     },
     addTask: function (Task, callback) {
+        var Id = Task.Id?Task.Id:null;
         return db.query("Insert into task values(?,?,?)", [Task.Id, Task.Title, Task.Status], callback);
     },
     deleteTask: function (id, callback) {
