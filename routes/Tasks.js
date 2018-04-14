@@ -27,6 +27,7 @@ router.get('/:id?', function (req, res, next) {
         });
     }
 });
+// add task
 router.post('/', function (req, res, next) {
 
     Task.addTask(req.body, function (err, count) {
@@ -39,6 +40,7 @@ router.post('/', function (req, res, next) {
         }
     });
 });
+// delete all task
 router.post('/:id', function (req, res, next) {
     Task.deleteAll(req.body, function (err, count) {
         if (err) {
@@ -48,6 +50,7 @@ router.post('/:id', function (req, res, next) {
         }
     });
 });
+// delete task by id
 router.delete('/:id', function (req, res, next) {
 
     Task.deleteTask(req.params.id, function (err, count) {
@@ -60,6 +63,7 @@ router.delete('/:id', function (req, res, next) {
 
     });
 });
+// update task by id
 router.put('/:id', function (req, res, next) {
 
     Task.updateTask(req.params.id, req.body, function (err, rows) {
