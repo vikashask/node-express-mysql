@@ -48,5 +48,20 @@ describe('Books', () => {
 		    });
 	  });
   });
+
+  // below test focus on specific tests by pre-pending with f
+  fdescribe('/GET book', () => {
+	it('it should GET all the books', (done) => {
+		  chai.request(server)
+		  .get('/Tasks')
+		  .end((err, res) => {
+				res.should.have.status(200);
+				res.body.should.be.a('array');
+				res.body.length.should.be.eql(0);
+			done();
+		  });
+	});
+});
+
 });
   
