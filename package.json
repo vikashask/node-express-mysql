@@ -1,13 +1,13 @@
 {
   "name": "node-express-mysql",
   "version": "0.0.1",
-  "main": "app.js",  
+  "main": "app.js",
   "private": true,
   "scripts": {
     "start": "nodejs ./bin/www",
-    "test": "mocha --timeout 150000"    
+    "test": "mocha --timeout 150000"
   },
-  "dependencies": {    
+  "dependencies": {
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.1",
